@@ -1,10 +1,15 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
+import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
+import { ThemeProvider } from '@/components/theme-provider'
+
+const inter = Inter({ subsets: ['latin'] })
+const playfairDisplay = Playfair_Display({ subsets: ['latin'], variable: '--font-serif' })
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'Fedi Ben Zaghdane | Digital Marketing Specialist',
+  description: 'Digital Marketing Specialist with expertise in growth marketing, social media management, and paid advertising. Based in Tunis, targeting opportunities in GCC and international markets.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -28,8 +33,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   colorScheme: 'light dark',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
+    { media: '(prefers-color-scheme: light)', color: '#f8f6f3' },
+    { media: '(prefers-color-scheme: dark)', color: '#1a1816' },
   ],
 }
 
@@ -39,10 +44,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased">
-        {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+    <html lang="en" className="bg-background" suppressHydrationWarning>
+      <body className={`${inter.className} ${playfairDisplay.variable} antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+          {process.env.NODE_ENV === 'production' && <Analytics />}
+        </ThemeProvider>
       </body>
     </html>
   )
