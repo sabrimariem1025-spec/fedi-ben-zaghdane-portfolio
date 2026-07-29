@@ -25,9 +25,8 @@ export function Contact() {
   }
 
   const socialLinks = [
-    { icon: Mail, label: 'Email', href: 'mailto:fedi@example.com', handle: 'fedi@example.com' },
-    { icon: Share2, label: 'LinkedIn', href: 'https://linkedin.com/in/fedibenzaghdane', handle: 'fedibenzaghdane' },
-    { icon: ExternalLink, label: 'Twitter', href: 'https://twitter.com/fedibenzaghdane', handle: '@fedibenzaghdane' },
+    { icon: Mail, label: 'Email', href: 'mailto:zaghdenfedi@gmail.com', handle: 'zaghdenfedi@gmail.com' },
+    { icon: Share2, label: 'LinkedIn', href: 'https://linkedin.com/in/fadi-ben-zaghden', handle: 'fadi-ben-zaghden' },
   ]
 
   return (
@@ -68,10 +67,10 @@ export function Contact() {
               </div>
               <h3 className="font-semibold text-foreground mb-2">Email</h3>
               <Link
-                href="mailto:fedi@example.com"
+                href="mailto:zaghdenfedi@gmail.com"
                 className="text-sm text-accent hover:text-primary transition-colors break-all"
               >
-                fedi@example.com
+                zaghdenfedi@gmail.com
               </Link>
             </motion.div>
 
@@ -86,10 +85,10 @@ export function Contact() {
               </div>
               <h3 className="font-semibold text-foreground mb-2">Phone</h3>
               <Link
-                href="tel:+21692345678"
+                href="tel:+21653978028"
                 className="text-sm text-accent hover:text-primary transition-colors"
               >
-                +216 92 345 678
+                +216 53 97 80 28
               </Link>
             </motion.div>
 
@@ -104,7 +103,7 @@ export function Contact() {
               </div>
               <h3 className="font-semibold text-foreground mb-2">Location</h3>
               <p className="text-sm text-muted-foreground">
-                Tunis, Tunisia
+                Médenine, Tunisia
                 <br />
                 Available for remote work
               </p>
@@ -114,7 +113,7 @@ export function Contact() {
           {/* CTA Button */}
           <motion.div variants={itemVariants} className="text-center">
             <Link
-              href="mailto:fedi@example.com?subject=Let's collaborate"
+              href="mailto:zaghdenfedi@gmail.com?subject=Let's collaborate"
               className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg transition-all hover:scale-105 active:scale-95"
             >
               <Mail className="w-5 h-5" />
